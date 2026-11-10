@@ -2,7 +2,7 @@
 
 A sign-up page for an imaginary service, built as part of [The Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form) Intermediate HTML and CSS course.
 
-**Live preview:** https://YOUR-USERNAME.github.io/sign-up-form/
+**Live preview:** https://kho10-16.github.io/sign-up-form/
 
 ## Features
 
