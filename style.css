@@ -1,0 +1,165 @@
+/* ===== 1. Custom font for the logo ===== */
+@font-face {
+  font-family: "Norse";
+  src: url("fonts/Norse-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+/* ===== 2. Reset + page layout ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;               /* sidebar | content side by side */
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #111827;
+}
+
+/* ===== 3. Left sidebar ===== */
+.sidebar {
+  flex: 0 0 35%;               /* fixed ~35% width, no grow/shrink */
+  background: url("images/background.jpg") center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.logo-band {
+  margin-top: 25vh;
+  background: rgba(0, 0, 0, 0.5);   /* dark + semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+}
+
+.logo-band img {
+  width: 110px;
+}
+
+.logo-band h1 {
+  font-family: "Norse", serif;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.credit {
+  text-align: center;
+  padding: 16px;
+  font-size: 0.85rem;
+}
+
+.credit a {
+  color: white;
+}
+
+/* ===== 4. Right content area ===== */
+.content {
+  flex: 1;                     /* take all remaining space */
+  background: #F9FAFB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro {
+  padding: 0 48px 32px;
+  max-width: 720px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.intro p + p {
+  margin-top: 1.2rem;
+}
+
+/* ===== 5. Form card ===== */
+.signup {
+  background: white;
+  padding: 32px 48px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.signup h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;             /* wrap into 2 columns */
+  gap: 20px 64px;
+  max-width: 640px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;      /* label above input */
+  flex: 0 0 calc(50% - 32px);  /* 2 per row, minus half the gap */
+}
+
+.field label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.field input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Selected input: blue border + soft shadow */
+.field input:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.4);
+}
+
+/* Invalid after the user has interacted */
+.field input:user-invalid {
+  border-color: #DC2626;
+}
+
+/* ===== 6. Button + login link ===== */
+.actions {
+  padding: 32px 48px;
+}
+
+.actions button {
+  background: #596D48;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 48px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.actions button:hover {
+  background: #4A5C3B;
+}
+
+.actions p {
+  margin-top: 16px;
+}
+
+.actions a {
+  color: #596D48;
+  font-weight: 700;
+  text-decoration: none;
+}
